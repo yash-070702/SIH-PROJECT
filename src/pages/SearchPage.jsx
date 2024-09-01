@@ -1,12 +1,20 @@
-<<<<<<< HEAD
-import React from "react";
+
+import React from 'react'
+import { logout } from '../services/operations/authAPI'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import "./index.css";
-
 const SearchPage = () => {
+    const dispatch=useDispatch();
+    const navigate=useNavigate();
   return (
-    <>
-      <div className="main-box">
+    <div className='bg-yellow-500'>
+      Hello
+      <button onClick={()=>{
+        dispatch(logout(navigate))
+      }}>LogOut</button>
+        <div className="main-box">
         <video autoPlay loop muted playsInline className="back-video">
           <source src="/utils/cyborg.mp4" type="video/mp4" />
         </video>
@@ -21,28 +29,9 @@ const SearchPage = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
-
-export default SearchPage;
-=======
-import React from 'react'
-import { logout } from '../services/operations/authAPI'
-import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom';
-const SearchPage = () => {
-    const dispatch=useDispatch();
-    const navigate=useNavigate();
-  return (
-    <div className='bg-yellow-500'>
-      Hello
-      <button onClick={()=>{
-        dispatch(logout(navigate))
-      }}>LogOut</button>
     </div>
   )
 }
 
 export default SearchPage
->>>>>>> 38ad53e327900f57282489c39d8566920584ac0b
+
