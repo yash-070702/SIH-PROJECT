@@ -1,12 +1,13 @@
 import React from 'react'
 import { useState } from "react"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
-// import { useDispatch } from "react-redux"
+ import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
-
+import { setSignupData } from '../slices/authSlice'
+import {signUp} from "../services/operations/authAPI"
 const Signup = () => {
     const navigate = useNavigate()
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
   
     // student or instructor
 
@@ -47,10 +48,10 @@ const Signup = () => {
   
       // Setting signup data to state
       // To be used after otp verification
-    //   dispatch(setSignupData(signupData))
+      dispatch(setSignupData(signupData))
     //   // Send OTP to user for verification
     //   dispatch(sendOtp(formData.email, navigate))
-  
+    dispatch(signUp(formData.firstName,formData.lastName,formData.email,formData.password,formData.confirmPassword,navigate))
       // Reset
       setFormData({
         firstName: "",

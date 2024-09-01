@@ -1,13 +1,13 @@
 import React from 'react'
 import { useState } from "react"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
-// import { useDispatch } from "react-redux"
+ import { useDispatch } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
 
-
+import { login } from '../services/operations/authAPI'
 const Login = () => {
-//     const navigate = useNavigate()
-//   const dispatch = useDispatch()
+    const navigate = useNavigate()
+  const dispatch = useDispatch()
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -26,7 +26,7 @@ const Login = () => {
 
   const handleOnSubmit = (e) => {
     e.preventDefault()
-    // dispatch(login(email, password, navigate))
+  dispatch(login(email, password, navigate))
   }
 
   return (
