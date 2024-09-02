@@ -8,7 +8,6 @@ exports.signup=async(req,res)=>{
        //fetching data from req body
        const {
           firstName,
-          lastName,
           email,
           password,
           confirmPassword,
@@ -16,7 +15,7 @@ exports.signup=async(req,res)=>{
   
         //validate krlo 
   
-        if(!firstName || !lastName || !email || !confirmPassword || !password){
+        if(!firstName || !email || !confirmPassword || !password){
           return res .status(403).json({
               success:false,
               message:"All fields are required",
@@ -48,7 +47,6 @@ exports.signup=async(req,res)=>{
   
   const user=await User.create({
        firstName,
-        lastName,
         email,
         password: hashedPassword,
   })

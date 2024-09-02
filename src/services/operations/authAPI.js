@@ -11,7 +11,6 @@ const {
 
   export function signUp(
     firstName,
-    lastName,
     email,
     password,
     confirmPassword,
@@ -25,7 +24,6 @@ const {
       try {
         const response = await apiConnector("POST", SIGNUP_API, {
           firstName,
-          lastName,
           email,
           password,
           confirmPassword,
