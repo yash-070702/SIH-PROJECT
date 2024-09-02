@@ -12,6 +12,10 @@ const Homepage = () => {
 <Link to="/login">
       <button className='border border-richblack-700 bg-richblack-700 text-[12px] lg:text-[16px] px-2 py-1  lg:px-[12px] lg:py-[8px] text-richblack-5 font-semibold rounded-md hover:scale-95 transtion-all duration-200 '>Log In</button>
     </Link>
+
+    <Link to="/search-page">
+        <button className='bg-purple'>Search</button>
+    </Link>
     </div>
   )
 }
