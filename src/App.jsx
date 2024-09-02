@@ -3,7 +3,9 @@ import Homepage from './pages/Homepage'
 import {Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import SearchPage from './pages/SearchPage';
+
+import SearchPage from "./pages/SearchPage"
+
 
 const App = () => {
 
@@ -15,7 +17,7 @@ const App = () => {
       <Route path="/" element={<Homepage/>}/>
       <Route path="/signup" element={ <Signup />}/>
       <Route path="/login" element={<Login />}/>
-      <Route path="/searchpage" element={<SearchPage/>}/>
+      <Route path="/Search-page" element={<SearchPage/>}/>
       </Routes>
     </div>
   )

@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'CyberFont';
+    src: url('/fonts/cyberFont.ttf') format('truetype'); /* Correct format for .ttf files */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Space between search box and search results */
+}
+
+.heading {
+    text-align: center;
+    font-weight: bold;
+    font-family: "CyberFont", Verdana, Geneva, Tahoma, sans-serif;
+    color: aquamarine;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.main-box {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+}
+
+.scrollable-content {
+    width: 100%;
+    max-width: 800px; /* Optional: Set a max-width for the search results */
+    height: 50vh; /* Half the viewport height for the scrollable content */
+    overflow-y: auto; /* Enable scrolling within this container */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.back-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
