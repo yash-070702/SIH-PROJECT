@@ -13,6 +13,8 @@ const Signup = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
   
+    const showPassword=false;
+    const showConfirmPassword=false;
 
 
   
@@ -22,10 +24,6 @@ const Signup = () => {
       password: "",
       confirmPassword: "",
     })
-  
-    const [showPassword, setShowPassword] = useState(false)
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  
     const { firstName, email, password, confirmPassword } = formData
   
     // Handle input fields, when some value changes

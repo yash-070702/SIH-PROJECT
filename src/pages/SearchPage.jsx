@@ -9,11 +9,8 @@ const SearchPage = () => {
     const dispatch=useDispatch();
     const navigate=useNavigate();
   return (
-    <div className='bg-yellow-500'>
-      Hello
-      <button onClick={()=>{
-        dispatch(logout(navigate))
-      }}>LogOut</button>
+    <div className=''>
+
         <div className="main-box">
         <video autoPlay loop muted playsInline className="back-video">
           <source src="/utils/cyborg.mp4" type="video/mp4" />

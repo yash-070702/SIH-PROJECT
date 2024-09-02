@@ -1,29 +1,28 @@
 import React from 'react'
 import Homepage from './pages/Homepage'
 import {Route, Routes } from "react-router-dom";
-<<<<<<< HEAD
+
 import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
 import SearchPage from './pages/SearchPage';
-=======
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Aboutus from './pages/Aboutus';
+import Navbar from "./components/Navbar";
 
-import SearchPage from "./pages/SearchPage"
 
->>>>>>> b4e74ad8dcf6a3efc3b7fd11befeb97de4dae9e0
+
 
 const App = () => {
 
   return (
     <div className=''>
-     
+     <Navbar/>
      
       <Routes>
+      <Route path="about" element={<Aboutus/>}/>
       <Route path="/" element={<Homepage/>}/>
       <Route path="/signup" element={ <Signup />}/>
       <Route path="/login" element={<Login />}/>
-      <Route path="/Search-page" element={<SearchPage/>}/>
+      <Route path="/Searchpage" element={<SearchPage/>}/>
       </Routes>
     </div>
   )
